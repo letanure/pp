@@ -30,7 +30,7 @@
 		"release:local": "changeset version && changeset publish",
 		"prepublishOnly": "npm run ci",
 		"test": "vitest run",
-		"ci": "npm lint && npm lint:md && npm lint:exports && npm build && npm test"
+		"ci": "npm run lint && npm run lint:md && npm run lint:exports && npm run build && npm run test"
 	},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "^0.16.2",
