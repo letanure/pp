@@ -17,6 +17,7 @@ This project is a basic setup using Vite for development and build processes, al
 - **lefthook**: A tool for managing Git hooks.
 - **@commitlint/cli**: A tool for linting commit messages.
 - **@commitlint/config-conventional**: A shareable commitlint configuration for conventional commits.
+- **cspell**: A spell checker for code.
 
 ## Getting Started
 1. **Install dependencies**:
@@ -54,6 +55,11 @@ This project is a basic setup using Vite for development and build processes, al
    npm run format
    ```
 
+8. **Check spelling**:
+   ```sh
+   npm run cspell
+   ```
+
 ## Git Hooks
 This project uses Lefthook to manage Git hooks.
 
@@ -62,6 +68,9 @@ Runs Biome to check and fix issues in staged files before committing.
 
 ### Commit Message Hook
 Uses Commitlint to ensure commit messages follow the conventional commit format.
+
+### Pre-push Hook
+Runs CSpell to check for spelling errors in the code before pushing.
 
 ## License
 This project is licensed under the MIT License.

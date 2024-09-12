@@ -1,0 +1,21 @@
+{
+	"version": "0.2",
+	"language": "en",
+	"words": ["Biome", "vite"],
+	"ignoreWords": ["TODO"],
+	"ignorePaths": ["dist/**"],
+	"patterns": [],
+	"ignoreRegExpList": ["/font-family:\\s*[^;]+;/"],
+	"dictionaries": ["typescript", "javascript", "css"],
+	"languageSettings": [
+		{ "languageId": "commit-msg", "ignoreRegExpList": ["/^#.*/gm"] }
+	],
+	"enabledLanguageIds": [
+		"typescript",
+		"javascript",
+		"markdown",
+		"json",
+		"html",
+		"css"
+	]
+}
