@@ -1,7 +1,7 @@
 {
 	"name": "pp",
 	"private": false,
-	"version": "0.0.0-development",
+	"version": "0.1.0",
 	"description": "Just a builder for now",
 	"type": "module",
 	"keywords": ["vite"],
