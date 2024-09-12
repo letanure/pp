@@ -5,6 +5,8 @@ commit-msg:
       run: npx --no -- commitlint --edit $1
     spell-check:
       run: npx cspell --no-summary {1}
+    lint-md:
+      run: npx markdownlint '**/*.md' --ignore node_modules --fix --disable MD013
     
 pre-commit:
   commands:
@@ -12,6 +14,10 @@ pre-commit:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
       run: npx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
       stage_fixed: true
+    markdown-link-check:
+      glob: '*.md'
+      run: npx markdown-link-check {staged_files}
+
 
 pre-push:
   commands:

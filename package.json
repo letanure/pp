@@ -8,6 +8,7 @@
 		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"lint": "biome lint",
+		"lint:md": "npx markdownlint '**/*.md' --ignore node_modules --fix --disable MD013",
 		"format": "biome format --write"
 	},
 	"devDependencies": {
@@ -16,6 +17,8 @@
 		"@commitlint/config-conventional": "^19.5.0",
 		"cspell": "^8.14.2",
 		"lefthook": "^1.7.15",
+		"markdown-link-check": "^3.12.2",
+		"markdownlint-cli": "^0.41.0",
 		"typescript": "^5.5.3",
 		"vite": "^5.4.1"
 	}
