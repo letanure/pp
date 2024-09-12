@@ -15,6 +15,8 @@ This project is a basic setup using Vite for development and build processes, al
 - **typescript**: A language for application-scale JavaScript.
 - **vite**: A build tool that aims to provide a faster and leaner development experience for modern web projects.
 - **lefthook**: A tool for managing Git hooks.
+- **@commitlint/cli**: A tool for linting commit messages.
+- **@commitlint/config-conventional**: A shareable commitlint configuration for conventional commits.
 
 ## Getting Started
 1. **Install dependencies**:
@@ -57,6 +59,9 @@ This project uses Lefthook to manage Git hooks.
 
 ### Pre-commit Hook
 Runs Biome to check and fix issues in staged files before committing.
+
+### Commit Message Hook
+Uses Commitlint to ensure commit messages follow the conventional commit format.
 
 ## License
 This project is licensed under the MIT License.
