@@ -14,6 +14,7 @@ This project is a basic setup using Vite for development and build processes, al
 - **@biomejs/biome**: A tool for linting and formatting.
 - **typescript**: A language for application-scale JavaScript.
 - **vite**: A build tool that aims to provide a faster and leaner development experience for modern web projects.
+- **lefthook**: A tool for managing Git hooks.
 
 ## Getting Started
 1. **Install dependencies**:
@@ -21,30 +22,41 @@ This project is a basic setup using Vite for development and build processes, al
    npm install
    ```
 
-2. **Start the development server**:
+2. **Install Lefthook**:
+   ```sh
+   npx lefthook install
+   ```
+
+3. **Start the development server**:
    ```sh
    npm run dev
    ```
 
-3. **Build the project**:
+4. **Build the project**:
    ```sh
    npm run build
    ```
 
-4. **Preview the built project**:
+5. **Preview the built project**:
    ```sh
    npm run preview
    ```
 
-5. **Lint the project**:
+6. **Lint the project**:
    ```sh
    npm run lint
    ```
 
-6. **Format the code**:
+7. **Format the code**:
    ```sh
    npm run format
    ```
+
+## Git Hooks
+This project uses Lefthook to manage Git hooks.
+
+### Pre-commit Hook
+Runs Biome to check and fix issues in staged files before committing.
 
 ## License
 This project is licensed under the MIT License.
