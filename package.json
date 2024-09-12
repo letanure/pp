@@ -1,8 +1,23 @@
 {
 	"name": "pp",
-	"private": true,
-	"version": "0.0.0",
+	"private": false,
+	"version": "0.0.0-development",
+	"description": "Just a builder for now",
 	"type": "module",
+	"keywords": ["vite"],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/letanure/pp/issues"
+	},
+	"author": {
+		"name": "letanure",
+		"email": "letanure@gmail.com"
+	},
+	"files": ["dist"],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/letanure/pp.git"
+	},
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
