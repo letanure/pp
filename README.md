@@ -15,6 +15,8 @@ along with TypeScript for type checking and Biome for linting and formatting.
 - **format**: Formats the code using Biome.
 - **release:local**: Updates version and publishes changes locally using Changesets.
 - **prepublishOnly**: Runs the CI script before publishing.
+- **test**: Runs tests using Vitest.
+- **ci**: Runs linting, markdown linting, export linting, builds the project, and runs tests.
 
 ## Development Dependencies
 
@@ -27,6 +29,7 @@ along with TypeScript for type checking and Biome for linting and formatting.
 - **cspell**: A spell checker for code.
 - **markdownlint-cli**: A command-line interface for linting markdown files.
 - **@changesets/cli**: A tool for managing versioning and publishing.
+- **vitest**: A test runner for Vite projects.
 
 ## Getting Started
 
@@ -90,6 +93,18 @@ along with TypeScript for type checking and Biome for linting and formatting.
     npm run release:local
     ```
 
+11. **Run tests**:
+
+    ```sh
+    npm run test
+    ```
+
+12. **Run CI script**:
+
+    ```sh
+    npm run ci
+    ```
+
 ## Git Hooks
 
 This project uses Lefthook to manage Git hooks.
@@ -107,6 +122,19 @@ Uses Commitlint to ensure commit messages follow the conventional commit format.
 Runs CSpell to check for spelling errors in the code before pushing.
 
 Runs markdownlint to check and fix issues in markdown files before pushing.
+
+## Continuous Integration
+
+This project uses GitHub Actions for continuous integration. The CI workflow is defined in `.github/workflows/ci.yml`.
+
+### CI Workflow
+
+The CI workflow runs on every push to the `main` branch and on pull requests. It performs the following steps:
+
+1. **Checkout code**: Uses `actions/checkout@v4` to checkout the repository.
+2. **Setup Node.js**: Uses `actions/setup-node@v4` to set up Node.js version 20.
+3. **Install dependencies**: Runs `npm install` to install project dependencies.
+4. **Run CI script**: Runs `npm run ci` to lint, build, and test the project.
 
 ## License
 

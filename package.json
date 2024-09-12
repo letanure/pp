@@ -18,18 +18,22 @@
 		"type": "git",
 		"url": "https://github.com/letanure/pp.git"
 	},
+	"main": "dist/index.js",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"lint": "biome lint",
 		"lint:md": "npx markdownlint '**/*.md' --ignore node_modules --fix --disable MD013",
+		"lint:exports": "attw --pack .",
 		"format": "biome format --write",
 		"release:local": "changeset version && changeset publish",
 		"prepublishOnly": "npm run ci",
-		"ci": "npm lint && npm lint:md"
+		"test": "vitest run",
+		"ci": "npm lint && npm lint:md && npm lint:exports && npm build && npm test"
 	},
 	"devDependencies": {
+		"@arethetypeswrong/cli": "^0.16.2",
 		"@biomejs/biome": "1.9.0",
 		"@changesets/cli": "^2.27.8",
 		"@commitlint/cli": "^19.5.0",
@@ -39,6 +43,7 @@
 		"markdown-link-check": "^3.12.2",
 		"markdownlint-cli": "^0.41.0",
 		"typescript": "^5.5.3",
-		"vite": "^5.4.1"
+		"vite": "^5.4.1",
+		"vitest": "^2.1.0"
 	}
 }

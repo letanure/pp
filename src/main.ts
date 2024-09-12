@@ -2,6 +2,7 @@ import "./style.css";
 import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.ts";
 import typescriptLogo from "./typescript.svg";
+import { add } from "./utils.js";
 
 const appDiv = document.querySelector<HTMLDivElement>("#app");
 if (appDiv) {
@@ -20,6 +21,7 @@ if (appDiv) {
       <p class="read-the-docs">
         Click on the Vite and TypeScript logos to learn more
       </p>
+			<p>add(1, 2) = ${add(1, 2)}</p>
     </div>
   `;
 }

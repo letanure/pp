@@ -1,7 +1,7 @@
 {
 	"version": "0.2",
 	"language": "en",
-	"words": ["Biome", "vite"],
+	"words": ["Biome", "vite", "vitest"],
 	"ignoreWords": ["TODO"],
 	"ignorePaths": ["dist/**"],
 	"patterns": [],
