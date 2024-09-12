@@ -27,7 +27,7 @@
 		"format": "biome format --write",
 		"release:local": "changeset version && changeset publish",
 		"prepublishOnly": "npm run ci",
-		"ci": "pnpm lint && pnpm lint:md"
+		"ci": "npm lint && npm lint:md"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.0",
