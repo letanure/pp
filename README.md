@@ -13,6 +13,8 @@ along with TypeScript for type checking and Biome for linting and formatting.
 - **lint**: Lints the project using Biome.
 - **lint:md**: Lints and fixes markdown files using markdownlint.
 - **format**: Formats the code using Biome.
+- **release:local**: Updates version and publishes changes locally using Changesets.
+- **prepublishOnly**: Runs the CI script before publishing.
 
 ## Development Dependencies
 
@@ -24,6 +26,7 @@ along with TypeScript for type checking and Biome for linting and formatting.
 - **@commitlint/config-conventional**: A shareable commitlint configuration for conventional commits.
 - **cspell**: A spell checker for code.
 - **markdownlint-cli**: A command-line interface for linting markdown files.
+- **@changesets/cli**: A tool for managing versioning and publishing.
 
 ## Getting Started
 
@@ -80,6 +83,12 @@ along with TypeScript for type checking and Biome for linting and formatting.
    ```sh
    npm run cspell
    ```
+
+10. **Release locally**:
+
+    ```sh
+    npm run release:local
+    ```
 
 ## Git Hooks
 

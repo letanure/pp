@@ -24,10 +24,13 @@
 		"preview": "vite preview",
 		"lint": "biome lint",
 		"lint:md": "npx markdownlint '**/*.md' --ignore node_modules --fix --disable MD013",
-		"format": "biome format --write"
+		"format": "biome format --write",
+		"release:local": "changeset version && changeset publish",
+		"prepublishOnly": "npm run ci"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.0",
+		"@changesets/cli": "^2.27.8",
 		"@commitlint/cli": "^19.5.0",
 		"@commitlint/config-conventional": "^19.5.0",
 		"cspell": "^8.14.2",
